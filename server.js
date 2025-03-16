@@ -33,6 +33,15 @@ const seedGovernment = async () => {
         console.log('✅ Government account already exists.');
     }
 };
+// Root route for testing
+app.get('/', (req, res) => {
+  res.send('Backend is working!');
+});
+
+// Example of another route
+app.get('/api/endpoint', (req, res) => {
+  res.json({ message: 'This is an API endpoint' });
+});
 
 
 sequelize.sync().then(async () => {
