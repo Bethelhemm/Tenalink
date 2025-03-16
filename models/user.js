@@ -28,6 +28,6 @@ const User= sequelize.define('User', {
         ,defaultValue:true
     }
 
-});
+    }});
 
 module.exports = User;
