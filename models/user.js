@@ -18,8 +18,10 @@ const User= sequelize.define('User', {
         ,
     },
     role:{
-        type:DataTypes.ENUM('government','hospital','doctor'),
-        allowNull:false
+      type: Sequelize.STRING,
+      allowNull: false,
+      validate: {
+      isIn: [['government', 'hospital', 'doctor']]
     },
     is_active:{
         type:DataTypes.BOOLEAN
